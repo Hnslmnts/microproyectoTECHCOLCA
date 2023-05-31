@@ -9,18 +9,18 @@ CRUD (Crear, Leer, Actualizar y borrar campos)
 Se utilizó SQLite para vincular una Base de datos
 se utilizaron Funciones, Herencia, módulos, bucles con Python.
 
-1. Importar modulos para el proyecto:
+#### 1. Importar modulos para el proyecto:
 import sqlite3
 
-2. Se crea la conexión a la base de datos:
+#### 2. Se crea la conexión a la base de datos:
 
 
-3. Se conectarse a la base de datos
+#### 3. Se conectarse a la base de datos
 mi_conexion = sqlite3.connect('database.db')
 cursor = mi_conexion.cursor()
 
 
-4. Se crean funciones para el CRUD
+#### 4. Se crean funciones para el CRUD
 def mostrar_usuarios(conn):
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM usuario")
@@ -47,11 +47,12 @@ def actualizar_usuario(conn, id_usuario, nombre):
     conn.commit()
     print("Usuario actualizado correctamente.")
 
-5. Se conecta con la base de datos
+#### 5. Se conecta con la base de datos
+
 # Conectarse a la base de datos
 conn = sqlite3.connect('database.db')
 
-6. Se crea un menú principal con un bucle while para CRUD y salir de la condición.
+#### 6. Se crea un menú principal con un bucle while para CRUD y salir de la condición.
 while True:
     print("\n-- Menú Principal --")
     print("1. Mostrar usuarios")
@@ -87,7 +88,7 @@ while True:
 
     elif opcion == "5":
         break
-7.- Se sale de la base de datos.
+#### 7.- Se sale de la base de datos.
 # Cerrar la conexión a la base de datos
 conn.close()
 
